@@ -6,7 +6,9 @@ load_dotenv()
 
 # Get the OpenAI API key from the environment
 api_key = os.getenv('OPENAI_API_KEY')
-
+print(api_key)
+dag_path = os.getenv('dag_file_path')
+print(dag_path)
 # Initialize the OpenAI API client
 openai.api_key = api_key
 
@@ -39,7 +41,7 @@ def generate_airflow_dag(prompt):
 
     current_date = datetime.date.today()
     file_path = str(current_date)+"_"+prompt+ ".py"
-    file_path = "dags/"+file_path
+    file_path = dag_path+file_path
 
     # Save the generated DAG to the specified file path
     save_to_file(file_path, response.choices[0].text.strip())

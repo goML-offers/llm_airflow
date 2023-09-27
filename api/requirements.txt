@@ -1,0 +1,23 @@
+
+openai
+regex
+
+# Basic Python packages
+numpy
+pandas
+
+# Machine Learning Libraries
+scikit-learn
+
+
+requests
+python-dotenv
+uvicorn
+fastapi
+sqlalchemy
+pydantic
+
+datetime
+openai
+python-multipart
+uvicorn
